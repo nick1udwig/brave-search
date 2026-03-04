@@ -17,10 +17,46 @@ Simple Go CLI for Brave Search API, designed for agent-friendly usage.
 - Stores cache in `~/.brave-search/cache/`
 - Retries `429 Too Many Requests` automatically with backoff
 
-## Build
+## Install
+
+### Prerequisites
+
+- Go `1.23+`
+
+### Install to `~/.local/bin` (recommended)
+
+```bash
+./scripts/install.sh
+```
+
+The installer builds `./cmd/bravesearch` and installs the binary at:
+
+```bash
+~/.local/bin/bravesearch
+```
+
+If `~/.local/bin` is not in your `PATH`, add it:
+
+```bash
+export PATH="$HOME/.local/bin:$PATH"
+```
+
+You can also choose a custom location:
+
+```bash
+./scripts/install.sh --bin-dir /usr/local/bin
+```
+
+### Build Only (no install)
 
 ```bash
 go build -o bravesearch ./cmd/bravesearch
+```
+
+### Uninstall
+
+```bash
+rm -f ~/.local/bin/bravesearch
 ```
 
 ## API Key Setup
