@@ -26,6 +26,12 @@ Simple Go CLI for Brave Search API, designed for agent-friendly usage.
 ### Install to `~/.local/bin` (recommended)
 
 ```bash
+just install
+```
+
+Or:
+
+```bash
 ./scripts/install.sh
 ```
 
@@ -48,6 +54,12 @@ You can also choose a custom location:
 ```
 
 ### Build Only (no install)
+
+```bash
+just build
+```
+
+Or:
 
 ```bash
 go build -o bravesearch ./cmd/bravesearch
